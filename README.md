@@ -6,7 +6,7 @@ Common tools to get and calculate network data
 
 Android version Min 15 or Android SDK Min 35
 
-[Android version VS Android SDK](https://bintray.com/angelwangjing/maven/traceroute-for-android/_latestVersion)
+[Android version VS Android SDK](https://apilevels.com/)
 
 
 ## Description
