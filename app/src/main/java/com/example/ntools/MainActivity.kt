@@ -4,6 +4,7 @@ import kotlinx.coroutines.launch
 import com.example.ntools.ui.theme.NToolsTheme
 import com.example.ntools.material.icons.filled.* //own icons Objects
 import android.Manifest
+import android.app.Activity
 import android.content.ClipData
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -96,7 +97,8 @@ fun MainScreen() {
             Tool(context.getString(R.string.tool_scan_qr), QrCodeScanner24, context.getString(R.string.desc_scan_qr)),
             Tool(context.getString(R.string.tool_traceroute), TracerouteRoute24, context.getString(R.string.desc_traceroute)),
             Tool(context.getString(R.string.tool_whois_info), WhoisLanguage24, context.getString(R.string.desc_whois_info)),
-            Tool(context.getString(R.string.tool_about), Icons.Default.Info, context.getString(R.string.desc_about))
+            Tool(context.getString(R.string.tool_about), Icons.Default.Info, context.getString(R.string.desc_about)),
+            Tool(context.getString(R.string.tool_exit), ExitToApp24, context.getString(R.string.desc_exit))
         )
     }
 
@@ -1086,6 +1088,9 @@ fun MainScreen() {
                                         }
                                 )
                             }
+                        }
+                        stringResource(R.string.tool_exit) -> {
+                            (context as? Activity)?.finish()
                         }
                         else -> {
                             Text(
